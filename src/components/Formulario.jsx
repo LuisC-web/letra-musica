@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import useLetras from '../hooks/useLetras';
 const Formulario = () => {
   const [busqueda, setBusqueda] = useState({ artista: '', cancion: '' });
-  const { setAlerta } = useLetras();
+  const { setAlerta, busquedaLetra } = useLetras();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.values(busqueda).includes('')) {
-      setAlerta('Coloca nombre de artista y cancion ');
+      setAlerta('Coloca el nombre de artista y cancion ');
+      return;
     }
+    setAlerta('');
+    busquedaLetra(busqueda);
   };
 
   return (

@@ -22,7 +22,7 @@ const Formulario = () => {
           <input
             type="text"
             name="artista"
-            placeholder="Buscar por artista"
+            placeholder="Nombre del artista"
             onChange={(e) =>
               setBusqueda({ ...busqueda, [e.target.name]: e.target.value })
             }
@@ -33,7 +33,7 @@ const Formulario = () => {
           <input
             type="text"
             name="cancion"
-            placeholder="Buscar por canción"
+            placeholder="Nombre de la canción"
             onChange={(e) =>
               setBusqueda({ ...busqueda, [e.target.name]: e.target.value })
             }
